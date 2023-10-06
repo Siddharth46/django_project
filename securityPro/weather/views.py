@@ -7,3 +7,6 @@ def index(request):
     now = datetime.datetime.now()
     html = "<html><body>It is now %s, and django is available to access via Internet.</body></html>" % now
     return HttpResponse(html)
+
+def home(request):
+    return render(request, 'weather/home.html')
